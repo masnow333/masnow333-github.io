@@ -1,0 +1,29 @@
+nav{
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    font-size: 1.1rem;
+    a{
+        color: #000000;
+        text-decoration: none;
+    }
+    div{
+        display: grid;
+        justify-items: start;
+        a{
+            margin-left: 2rem;
+        }
+    }
+    ul{
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        li{
+            list-style: none;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+section.aboutMe{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 4rem;
+    div.textWrapper{
+        padding: 3rem;
+    }
+    div.pictureWrapper{
+        padding: 3rem;
+        img{
+            width: 100%;
+        }
+    }
+}

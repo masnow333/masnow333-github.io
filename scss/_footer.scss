@@ -1,0 +1,30 @@
+footer{
+    background: black;
+    display: grid;
+    padding: 3rem;
+    justify-items: center;
+    align-items: center;
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 7rem;
+        a{
+            &:nth-child(1) .icon:hover{
+                color: rgb(91, 91, 240);
+            }
+            &:nth-child(2) .icon:hover{
+                color: blue;
+            }
+            &:nth-child(3) .icon:hover{
+                color: green;
+            }
+            .icon{
+                color: #eeeeee;
+                font-size: 2rem;
+                transition: all .3s;
+                border-radius: 5px;
+            }
+        }
+    }
+}

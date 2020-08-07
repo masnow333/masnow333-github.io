@@ -1,0 +1,91 @@
+section.projects{
+    display: grid;
+    div.projectsTitle{
+        background: blueviolet;
+        height: 80vh;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        a{
+            text-decoration: none;
+            &:hover h5{
+                gap: 2rem;
+            }
+            h5{
+                font-family: 'Monoton', cursive;
+                font-size: 5rem;
+                margin: 0;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                grid-template-columns: 1fr;
+                cursor: pointer;
+                transition: all .3s;
+                gap: 0;
+                color: #eeeeee;
+                text-transform: uppercase;
+                &::before{
+                    content: 'Projects';
+                    clip-path: inset(0 0 50% 0);
+                    position: relative;
+                    bottom: -50%;
+                }
+                &::after{
+                    content: 'Projects';
+                    clip-path: inset(50% 0 0 0);
+                    position: relative;
+                    top: -50%;
+                }
+            }
+        }
+    }
+    div.projectsShow{
+        justify-self: center;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        div.wrapper{
+            width: 70%;
+            height: 70vh;
+            display: grid;
+            grid-template-rows: 30% 70%;
+            margin: 5rem;
+            background: blueviolet;
+            div.mini{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 1rem;
+                gap: 1rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            div.pictureShow{
+                margin: 1rem;
+                margin-top: 0;
+                overflow: hidden;
+                div{
+                    display: grid;
+                    grid-template-columns: repeat(4, 100%);
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    left: 0;
+                    transition: all 1s;
+                    div{
+                        background: #eeeeee;
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                        font-size: 5rem;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

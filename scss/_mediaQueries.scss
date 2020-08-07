@@ -1,0 +1,144 @@
+@media screen and (max-width: 700px){
+    nav{
+        grid-template-columns: 1fr;
+        div{
+            display: none;
+        }
+    }
+    
+    section.principalPicture{
+        .backgroundPicture{
+            height: auto;
+        }
+        div.pictureText{
+            position: absolute;
+            width: 50%;
+            right: 0;
+            top: 4rem;
+        }
+    }
+
+    section.aboutMe{
+        grid-template-columns: 1fr;
+        margin: 3rem;
+        .pictureWrapper{
+            padding: 0rem;
+        }
+    }
+
+    section.contact{
+        grid-template-columns: 1fr;
+        div.imageWrapper{
+            padding: 4rem;
+            width: 70%;
+            grid-row: 2/3;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .visibility{
+        z-index: 100;
+        clip-path: circle(200% at 0% 0%);
+    }
+
+    nav{
+        z-index: 0;
+        clip-path: circle(15% at 0% 0%);
+        transition: all .8s;
+        ul{
+            width: 100vw;
+            height: 100vh;
+            background: #eeeeee;
+            margin: 0;
+            padding: auto;
+            grid-template-columns: 1fr;
+            align-content: center;
+            font-size: 2rem;
+            gap: 3rem;
+            li{
+                a{
+                    color: blueviolet;
+                }
+            }
+            div.span{
+                display: grid;
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                left: 0;
+                top: 0;
+                padding: .5rem;
+                align-items: center;
+                background: blueviolet;
+                border-radius: 100%;
+                cursor: pointer;
+                span{
+                    width: 100%;
+                    height: 3px;
+                    background: #eeeeee;
+                    &:nth-child(1){
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                    }
+                    &:nth-child(2){
+                        rotate: 90deg;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                    }
+                }
+            }
+        }
+    }
+
+    section.aboutMe{
+        margin: 4rem 0;
+        div.textWrapper{
+            padding: 1rem;
+        }
+        .pictureWrapper{
+            padding: 0;
+        }
+    }
+
+    section.projects{
+        div.projectsTitle{
+            a{
+                h5{
+                    font-size: 2.3rem;
+                }
+            }
+        }
+        div.projectsShow{
+            div.wrapper{
+                div.pictureShow{
+                    div{
+                        div{
+                            h5{
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.contact{
+        margin: 7rem 0;
+        div.textWrapper{
+            h5{
+                font-size: 300%;
+            }
+        }
+    }
+
+    footer{
+        div.wrapper{
+            gap: 1rem;
+            position: relative;
+
+        }
+    }
+}

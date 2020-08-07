@@ -1,22 +1,22 @@
 section.contact{
-    grid-template-columns: 50% 50%;
     display: grid;
-    margin: 7rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 7rem 5rem;
     align-items: center;
     justify-items: center;
     div.imageWrapper{
-        width: 80%;
+        width: 100%;
         img{
             width: 100%;
         }
     }
     div.textWrapper{
-        padding: 10rem 5rem;
+        padding: 10rem auto;
         display: grid;
-        gap: 3rem;
+        gap: 10%;
         justify-items: right;
         h5{
-            font-size: 5rem;
+            font-size: 400%;
             font-family: 'Monoton', cursive;
             text-transform: uppercase;
             margin-top: 0;

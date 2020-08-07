@@ -24,6 +24,9 @@ nav ul {
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
 }
+nav ul div.span {
+  display: none;
+}
 nav ul li {
   list-style: none;
 }
@@ -99,6 +102,8 @@ section.projects div.projectsTitle {
   justify-items: center;
 }
 section.projects div.projectsTitle a {
+  position: relative;
+  z-index: 1;
   text-decoration: none;
 }
 section.projects div.projectsTitle a:hover h5 {
@@ -145,6 +150,8 @@ section.projects div.projectsShow div.wrapper {
   background: blueviolet;
 }
 section.projects div.projectsShow div.wrapper div.mini {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
@@ -167,13 +174,16 @@ section.projects div.projectsShow div.wrapper div.pictureShow div {
   position: relative;
   left: 0;
   transition: all 1s;
-}
-section.projects div.projectsShow div.wrapper div.pictureShow div div {
-  background: #eeeeee;
-  display: grid;
   align-items: center;
   justify-items: center;
-  font-size: 5rem;
+}
+section.projects div.projectsShow div.wrapper div.pictureShow div div {
+  width: 100%;
+  height: 100%;
+  background: #eeeeee;
+  display: grid;
+  font-size: 400%;
+  text-align: center;
 }
 section.projects div.projectsShow div.wrapper div.pictureShow div img {
   width: 100%;
@@ -181,26 +191,26 @@ section.projects div.projectsShow div.wrapper div.pictureShow div img {
 }
 
 section.contact {
-  grid-template-columns: 50% 50%;
   display: grid;
-  margin: 7rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 7rem 5rem;
   align-items: center;
   justify-items: center;
 }
 section.contact div.imageWrapper {
-  width: 80%;
+  width: 100%;
 }
 section.contact div.imageWrapper img {
   width: 100%;
 }
 section.contact div.textWrapper {
-  padding: 10rem 5rem;
+  padding: 10rem auto;
   display: grid;
-  gap: 3rem;
+  gap: 10%;
   justify-items: right;
 }
 section.contact div.textWrapper h5 {
-  font-size: 5rem;
+  font-size: 400%;
   font-family: "Monoton", cursive;
   text-transform: uppercase;
   margin-top: 0;
@@ -259,6 +269,124 @@ footer .wrapper a .icon {
 body {
   background: #eeeeee;
   font-family: "Chilanka", cursive;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    grid-template-columns: 1fr;
+  }
+  nav div {
+    display: none;
+  }
+
+  section.principalPicture .backgroundPicture {
+    height: auto;
+  }
+  section.principalPicture div.pictureText {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 4rem;
+  }
+
+  section.aboutMe {
+    grid-template-columns: 1fr;
+    margin: 3rem;
+  }
+  section.aboutMe .pictureWrapper {
+    padding: 0rem;
+  }
+
+  section.contact {
+    grid-template-columns: 1fr;
+  }
+  section.contact div.imageWrapper {
+    padding: 4rem;
+    width: 70%;
+    grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 500px) {
+  .visibility {
+    z-index: 100;
+    clip-path: circle(200% at 0% 0%);
+  }
+
+  nav {
+    z-index: 0;
+    clip-path: circle(15% at 0% 0%);
+    transition: all 0.8s;
+  }
+  nav ul {
+    width: 100vw;
+    height: 100vh;
+    background: #eeeeee;
+    margin: 0;
+    padding: auto;
+    grid-template-columns: 1fr;
+    align-content: center;
+    font-size: 2rem;
+    gap: 3rem;
+  }
+  nav ul li a {
+    color: blueviolet;
+  }
+  nav ul div.span {
+    display: grid;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 0;
+    top: 0;
+    padding: 0.5rem;
+    align-items: center;
+    background: blueviolet;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  nav ul div.span span {
+    width: 100%;
+    height: 3px;
+    background: #eeeeee;
+  }
+  nav ul div.span span:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  nav ul div.span span:nth-child(2) {
+    rotate: 90deg;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  section.aboutMe {
+    margin: 4rem 0;
+  }
+  section.aboutMe div.textWrapper {
+    padding: 1rem;
+  }
+  section.aboutMe .pictureWrapper {
+    padding: 0;
+  }
+
+  section.projects div.projectsTitle a h5 {
+    font-size: 2.3rem;
+  }
+  section.projects div.projectsShow div.wrapper div.pictureShow div div h5 {
+    font-size: 2rem;
+  }
+
+  section.contact {
+    margin: 7rem 0;
+  }
+  section.contact div.textWrapper h5 {
+    font-size: 300%;
+  }
+
+  footer div.wrapper {
+    gap: 1rem;
+    position: relative;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
